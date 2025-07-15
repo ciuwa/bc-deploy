@@ -1,11 +1,15 @@
 {
   "name": "bc-depoly",
-  "version": "1.0.0",
+  "version": "0.0.8",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "basic-ftp": "^5.0.5"
+  }
 }
