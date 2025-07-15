@@ -4,5 +4,7 @@ updateVersion() // 更新package版本 +1
 
 console.log(getCurrentVersion()) // 获取版本
 
-gitCommit() // 提交到 git 
+gitCommit({
+  message: 'add index.d.ts',
+}) // 提交到 git 
 
