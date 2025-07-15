@@ -54,7 +54,7 @@ export function getCurrentVersion() {
 export function gitCommit(options = {}) {
   const {
     branch = 'main',
-    message = '其它: Auto-commit',
+    message = '其它: ',
     skipTag = false,
     onError = (err) => console.error('Git操作失败:', err.message)
   } = options;
@@ -64,7 +64,8 @@ export function gitCommit(options = {}) {
     execSync('git add .', { stdio: 'inherit' });
 
     // 2. 生成提交信息（支持自定义时间格式）
-    const commitMessage = `${message}: | Auto build`;
+    const timestamp = new Date().toISOString();
+    const commitMessage = `${message}: | Auto build on ${timestamp}`;
     execSync(`git commit -m "${commitMessage}"`, { stdio: 'inherit' });
 
     // 3. 打标签（可选）
